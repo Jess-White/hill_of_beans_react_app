@@ -4,14 +4,12 @@ class RateMovie extends React.Component {
    render() {
       const {movie} = this.props;
 
-    
-
-  handleThumbsUp = (event) => {
+  const handleThumbsUp = (event) => {
     event.preventDefault();
     const thumbs_up = 1
    }
 
-   handleThumbsDown = (event) => {
+   const handleThumbsDown = (event) => {
     event.preventDefault();
     const thumbs_down = 1
    }
