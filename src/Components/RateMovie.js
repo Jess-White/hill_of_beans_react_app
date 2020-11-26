@@ -2,17 +2,14 @@ import React from 'react';
 
 class RateMovie extends React.Component {
    render() {
-       const {Title, Poster, Year} = this.props;
+       const {movie} = this.props;
 
        return (
-           <div className="movie">
-               <div className="title-year">
-                   <h1 className="title">{Title}</h1>
-                   <h2 className="year">{Year}</h2>
-               </div>
-               <div className="poster">
-                   <img src={Poster} alt="my movie poster"/>
-               </div>
+           <div className="rate-movie">
+               <div className="search">
+             <button type="submit" onClick={this.handleThumbsUp} value="thumbs_up">Thumbs Up</button>
+             <button type="submit" onClick={this.handleThumbsDown} value="thumbs_up">Thumbs Down</button>
+         </div>
            </div>
        )
    }
