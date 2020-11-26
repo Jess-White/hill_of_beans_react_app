@@ -1,42 +1,21 @@
 import React from 'react';
-import { getMovie } from '../Services/IMDBAPI.js';
+import { addFilm } from '../Services/RailsDB.js';
 
 
-export default class SearchMovie extends React.Component {
-   state= {
-       title: ''
-   }
+export default class AddMovie extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  handleInputTitle = (event) => {
-     event.preventDefault();
-     const title = event.target.value;
-     this.setState({title});
-   }
+  handleAddMovie = () => {
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-   }
-
-  handleSubmit = () => {
-    const title = this.state.title;
-    if (title) {
-      this.props.handleSearchMovie(title)
-    } else {
-      this.props.handleSearchMovie("blank")
-    }
-    // getMovie(title)
-    this.setState({title: ''})
+    addFilm()
    }
 
    render() {
-    console.log(this.state.title)
-    const {title} = this.state;
      return (
-         <div className="search">
-             <input className="search-box" type="text" name="title" onChange={this.handleInputTitle} value={title}/>
-             <button type="submit" onClick={this.handleSubmit} value="Search">Search</button>
+         <div className="add_movie">
+             <button type="submit" onClick={this.handleAddMovie} value="add_movie">Add Movie</button>
          </div>
      )
    }

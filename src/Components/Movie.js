@@ -1,9 +1,11 @@
 import React from 'react';
 import { getMovie } from '../Services/IMDBAPI';
+import AddMovie from './AddMovie';
+
 
 class Movie extends React.Component {
    render() {
-       const {Title, Poster, Year} = this.props.movie;
+       const {Title, Poster, Year, imdbID} = this.props.movie;
 
        return (
            <div className="movie">
@@ -14,6 +16,7 @@ class Movie extends React.Component {
                <div className="poster">
                    <img src={Poster} alt="my movie poster"/>
                </div>
+               <AddMovie title={Title} imdb_number={imdbID} />
            </div>
        )
    }

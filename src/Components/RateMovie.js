@@ -2,7 +2,19 @@ import React from 'react';
 
 class RateMovie extends React.Component {
    render() {
-       const {movie} = this.props;
+      const {movie} = this.props;
+
+    
+
+  handleThumbsUp = (event) => {
+    event.preventDefault();
+    const thumbs_up = 1
+   }
+
+   handleThumbsDown = (event) => {
+    event.preventDefault();
+    const thumbs_down = 1
+   }
 
        return (
            <div className="rate-movie">
