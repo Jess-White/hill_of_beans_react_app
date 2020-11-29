@@ -19,7 +19,7 @@ class RateMovie extends React.Component {
                <div className="search">
              <button type="submit" onClick={this.handleThumbsUp} value="thumbs_up">Thumbs Up</button>
              <button type="submit" onClick={this.handleThumbsDown} value="thumbs_up">Thumbs Down</button>
-         </div>
+          </div>
            </div>
        )
    }

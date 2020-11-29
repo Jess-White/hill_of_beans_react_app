@@ -8,7 +8,6 @@ export default class AddMovie extends React.Component {
   }
 
   handleAddMovie = () => {
-
     addFilm()
    }
 
