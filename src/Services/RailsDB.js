@@ -3,30 +3,30 @@ import axios from 'axios';
 //get all of the movies from the database 
 
 export const getSavedFilms = () => {
-  return axios('/api/films')
+  return axios('http://localhost:3000/api/films')
     .then(response => response.data)
 }
 
 //add a new film to the database
 
-export const addFilm = ({title, imdb_number, thumbs_up, thumbs_down}) => {
+export const addFilm = (title, imdb_number, action) => {
   return axios
-    .post('/api/films', {title, imdb_number, thumbs_up, thumbs_down})
+    .post('http://localhost:3000/api/films', {title, imdb_number, action})
     .then(response => response.data)
 }
 
+export const createOrUpdateFilm = ({})
+
 //add incremented score to the database
 
-export const rateFilm = () => {
-  const { title, imdb_number, thumbs_up, thumbs_down } = this.state;
+export const updateFilm = (title, imdb_number, action, db_id) => {
   return axios
     .patch(
-      '/api/films/' + this.state.id,
+      'http://localhost:3000/api/films/' + db_id,
       {
         title: title,
         imdb_number: imdb_number,
-        thumbs_up: thumbs_up,
-        thumbs_down: thumbs_down
+        action: action
       },
       )
       .then(response => response.data)

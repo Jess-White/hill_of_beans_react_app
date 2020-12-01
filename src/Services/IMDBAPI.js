@@ -1,15 +1,26 @@
 import axios from "axios";
 
+// export const getMovies = (title) => {
+
+//   const options = {
+//     method: 'GET',
+//     url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
+//     params: {s: title, page: '1', r: 'json'},
+//     headers: {
+//       'x-rapidapi-key': 'e979f7406cmsh363d1f98423c118p197d7bjsnce1e962638fd',
+//       'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com'
+//     }
+//   };
+
+//   return axios.request(options)
+
+// }
+
 export const getMovies = (title) => {
 
   const options = {
     method: 'GET',
-    url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
-    params: {s: title, page: '1', r: 'json'},
-    headers: {
-      'x-rapidapi-key': 'e979f7406cmsh363d1f98423c118p197d7bjsnce1e962638fd',
-      'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com'
-    }
+    url: `http://localhost:3000/api/films/search?title=${title}`
   };
 
   return axios.request(options)

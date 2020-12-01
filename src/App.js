@@ -40,7 +40,7 @@ export default function App() {
   const handleSearchMovie = (title) => {
     getMovies(title)
     .then((response) => {
-      const movies = response.data.Search;
+      const movies = response.data;
       console.log(movies);
       setMovies(movies)
     })
@@ -88,10 +88,8 @@ export default function App() {
       <SearchMovie handleSearchMovie={handleSearchMovie} />
 
       {movies.map((movie) => {
-        return <Movie movie={movie} />
+        return <Movie key={movie.imdbID} movie={movie} />
       })}
-
-      <RateMovie />
 
     </div>
   );
