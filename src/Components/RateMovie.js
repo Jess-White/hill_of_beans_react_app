@@ -28,7 +28,7 @@ class RateMovie extends Component {
     return (
        <div className="rate-movie">
          <button type="submit" onClick={this.handleThumbsUp} value="thumbs_up">Thumbs Up</button>
-         <button type="submit" onClick={this.handleThumbsDown} value="thumbs_up">Thumbs Down</button>
+         <button type="submit" onClick={this.handleThumbsDown} value="thumbs_down">Thumbs Down</button>
       </div>
    )
    }
