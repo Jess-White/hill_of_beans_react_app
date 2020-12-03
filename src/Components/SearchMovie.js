@@ -34,16 +34,6 @@ export default class SearchMovie extends React.Component {
     this.setState({title: ''})
    }
 
-   handleThumbsUp = (event) => {
-    event.preventDefault();
-    const thumbs_up = 1
-   }
-
-   handleThumbsDown = (event) => {
-    event.preventDefault();
-    const thumbs_down = 1
-   }
-
    handleAddFilm = () => {
       addFilm()
    }

@@ -15,9 +15,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   //set in state for movie SEARCH function:
   const [movies, setMovies] = useState([])
+  // const [thumbsUp, setThumbsUp] = useState([])
+  // const [thumbsDown, setThumbsDown] = useState([])
+
+  // const updateThumbs = () => {
+  //   setThumbsUp(newThumbsUp)
+  //   setThumbsDown(newThumbsDown)
+  // }
+
+  // useEffect(() => {
+  //   getMovies() 
+  //     .then(response => {
+  //       setMovies(response)
+  //     }).catch(error => {
+  //       setError("Something went wrong.")
+  //     })
+  // }, [])
+
+
+  
   
   //set in state for ADD MOVIE to DATABASE function: 
-  const movieRating = useState({movie_title: '', thumbs_up: '', thumbs_down: '', })
+  // const movieRating = useState({movie_title: '', thumbs_up: '', thumbs_down: '', })
 
   const [error, setError] = useState("")
   const [showAbout, setShowAbout] = useState(false);
@@ -28,14 +47,7 @@ export default function App() {
 
   const handleCloseAbout = () => setShowAbout(false);
 
-  // useEffect(() => {
-  //   getMovie() 
-  //     .then(response => {
-  //       setMovies(response)
-  //     }).catch(error => {
-  //       setError("Something went wrong.")
-  //     })
-  // }, [])
+  
 
   const handleSearchMovie = (title) => {
     getMovies(title)
@@ -85,10 +97,10 @@ export default function App() {
         </ModalFooter>
       </Modal>
 
-      <SearchMovie handleSearchMovie={handleSearchMovie} />
+      <SearchMovie handleSearchMovie={handleSearchMovie}/>
 
       {movies.map((movie) => {
-        return <Movie key={movie.imdbID} movie={movie} />
+        return <Movie key={movie.imdbID} movie={movie}/>
       })}
 
     </div>

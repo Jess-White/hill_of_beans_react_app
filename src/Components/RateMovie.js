@@ -4,22 +4,22 @@ import { addFilm, updateFilm } from '../Services/RailsDB.js';
 class RateMovie extends Component {
 
   handleThumbsUp = (event) => {
+    const rating = "thumbs_up"
     event.preventDefault();
-    const action = "thumbs_up"
     if (this.props.db_id) {
-      updateFilm(this.props.imdb_number, this.props.title, this.props.db_id, action)
+      updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
     } else{
-      addFilm(this.props.imdb_number, this.props.title, action)
+      addFilm(this.props.imdb_number, this.props.title, rating)
     }
    }
 
    handleThumbsDown = (event) => {
-    const action = "thumbs_down"
+    const rating = "thumbs_down"
     event.preventDefault();
     if (this.props.db_id) {
-      updateFilm(this.props.imdb_number, this.props.title, this.props.db_id, action)
+      updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
     } else{
-      addFilm(this.props.imdb_number, this.props.title, action)
+      addFilm(this.props.imdb_number, this.props.title, rating)
     }
    }
 
@@ -35,3 +35,4 @@ class RateMovie extends Component {
 }
 
 export default RateMovie;
+
