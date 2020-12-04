@@ -149,11 +149,3 @@ export default class Movie extends React.Component {
        )
    }
 }
-
-                    // <h5>Rating: {Rated}</h5>
-                    // <h5>Runtime: {Runtime}</h5>
-                    // <h5>Genre: {Genre}</h5>
-                    // <h5>Director: {Director}</h5>
-                    // <h5>Actors: {Actors}</h5>
-                    // <h5>Description: {Plot}</h5>
-                    // <h5>Awards: {Awards}</h5>

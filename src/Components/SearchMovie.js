@@ -1,7 +1,5 @@
 import React from 'react';
-import { getMovie } from '../Services/IMDBAPI.js';
 import { addFilm } from '../Services/RailsDB.js';
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 export default class SearchMovie extends React.Component {
@@ -32,7 +30,6 @@ export default class SearchMovie extends React.Component {
     } else {
       this.props.handleSearchMovie(NOUSERINPUT)
     }
-    // getMovie(title)
     this.setState({title: ''})
    }
 
