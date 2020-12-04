@@ -5,23 +5,58 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ModalBody from 'react-bootstrap/ModalBody';
 import ModalFooter from 'react-bootstrap/ModalFooter';
+import axios from "axios";
 
 
 export default class Movie extends React.Component {
     state = {
-      showMovie: false
+      showMovie: false,
+      Rating: "",
+      Runtime: "",
+      Genre: "",
+      Director: "", 
+      Actors: "",
+      Plot: "",
+      Awards: ""
     }
 
   handleShowMovie = () => {
     this.setState({
       showMovie: true
     })
+    this.getMoreInfo()
   }
 
   handleCloseShowMovie = () => {
     this.setState({
       showMovie: false
     })
+  }
+
+  getMoreInfo = () => {
+    const inputID = this.props.movie.imdbID
+    const options = {
+      method: 'GET',
+      url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
+      params: {i: `${inputID}`, r: 'json'},
+      headers: {
+        'x-rapidapi-key': 'e979f7406cmsh363d1f98423c118p197d7bjsnce1e962638fd',
+        'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com'
+      }
+    }
+    axios.request(options).then((response) => {
+      this.setState({
+        Rating: response.data.Rated,
+        Runtime: response.data.Runtime,
+        Genre: response.data.Genre,
+        Director: response.data.Director, 
+        Actors: response.data.Actors,
+        Plot: response.data.Plot,
+        Awards: response.data.Awards
+    })
+    }).catch(function (error) {
+      console.error(error);
+    });
   }
 
    render() {
@@ -64,8 +99,22 @@ export default class Movie extends React.Component {
                </Button>
                <Modal show={this.state.showMovie}>
                <ModalBody>
-                <div style={{paddingBottom: "2%"}}>
-                   <h2 className="year">{Year}</h2>
+                <div style={{
+                  backgroundColor: "#3d3d3d",
+                  color: "#c5c5c5",
+                  padding: "2%",
+                  margin: "0%"}}>
+                   <h5>
+                    Title: {Title}
+                    </h5>
+                    <h5>Year: {Year}</h5>
+                    <h5>Rating: {this.state.Rating}</h5>
+                    <h5>Runtime: {this.state.Runtime}</h5>
+                    <h5>Genre: {this.state.Genre}</h5>
+                    <h5>Director: {this.state.Director}</h5>
+                    <h5>Actors: {this.state.Actors}</h5>
+                    <h5>Description: {this.state.Plot}</h5>
+                    <h5>Awards: {this.state.Awards}</h5>
                </div>
                </ModalBody>
                  <ModalFooter>
@@ -89,3 +138,11 @@ export default class Movie extends React.Component {
        )
    }
 }
+
+                    // <h5>Rating: {Rated}</h5>
+                    // <h5>Runtime: {Runtime}</h5>
+                    // <h5>Genre: {Genre}</h5>
+                    // <h5>Director: {Director}</h5>
+                    // <h5>Actors: {Actors}</h5>
+                    // <h5>Description: {Plot}</h5>
+                    // <h5>Awards: {Awards}</h5>

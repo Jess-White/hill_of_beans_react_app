@@ -10,3 +10,4 @@ export const getMovies = (title) => {
   return axios.request(options)
 
 }
+
