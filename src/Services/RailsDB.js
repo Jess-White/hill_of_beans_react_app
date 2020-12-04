@@ -34,17 +34,3 @@ export const updateFilm = (db_id, imdb_number, title, rating) => {
         console.log('film rating error', error);
       })
 }
-
-//check to see if the film is already in the database
-
-export const checkFilm = () => {
-  let title = this.state.title
-  let filmArray = getSavedFilms()
-  filmArray.forEach((film) => {
-    if (film.title === title) {
-      return film
-    } else {
-      addFilm()
-    }
-  })
-}

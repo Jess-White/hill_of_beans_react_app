@@ -11,34 +11,10 @@ import SearchMovie from './Components/SearchMovie';
 import RateMovie from './Components/RateMovie';
 import About from './Components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
 
 export default function App() {
-  //set in state for movie SEARCH function:
   const [movies, setMovies] = useState([])
-  // const [thumbsUp, setThumbsUp] = useState([])
-  // const [thumbsDown, setThumbsDown] = useState([])
-
-  // const updateThumbs = () => {
-  //   setThumbsUp(newThumbsUp)
-  //   setThumbsDown(newThumbsDown)
-  // }
-
-  // useEffect(() => {
-  //   getMovies() 
-  //     .then(response => {
-  //       setMovies(response)
-  //     }).catch(error => {
-  //       setError("Something went wrong.")
-  //     })
-  // }, [])
-
-
-  
-  
-  //set in state for ADD MOVIE to DATABASE function: 
-  // const movieRating = useState({movie_title: '', thumbs_up: '', thumbs_down: '', })
-
-  const [error, setError] = useState("")
   const [showAbout, setShowAbout] = useState(false);
 
   const handleShowAbout = () => {
@@ -58,39 +34,27 @@ export default function App() {
     })
   }
 
-
-  if (error) {
-    return <h1>{error}</h1>
-  }
-
   return (
-    <div className="App">
-      <Header />
+    <div className="App" style={{backgroundImage: `url("https://www.deccanherald.com/sites/dh/files/articleimages/2020/09/19/ingrid-bergman-889682-1600474553.jpg")`, 
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'}}>>
       
-      <Button 
-        className="btn-lg" 
-        style={{
-          backgroundColor: "#ffff1b", 
-          color: "#000080", 
-          fontSize: "20px", 
-          fontWeight: "bold",
-          margin: "2%"
-        }} 
-        type="submit"
-        onClick={handleShowAbout}>What is this for?
-      </Button>
+      <Header />
+
       <Modal show={showAbout}>
       <ModalBody>
       <About></About>
       </ModalBody>
         <ModalFooter>
-          <Button 
-            className="close-btn" 
-            color="danger" 
+          <Button  
             style={{ 
-              backgroundColor: "#000080", 
-              color: "#ffff1b", 
-              width: "100%"
+              backgroundColor: "#242424", 
+              color: "#f2f2f2",
+              width: "100%",
+              fontSize: "30px",
+              border: "3px solid #fafafa",
+              fontFamily: "Trebuchet MS, Helvetica, sans-serif"
             }} 
             onClick={handleCloseAbout}>Close
           </Button>
@@ -102,6 +66,20 @@ export default function App() {
       {movies.map((movie) => {
         return <Movie key={movie.imdbID} movie={movie}/>
       })}
+
+      <Button 
+        className="btn-lg" 
+        style={{ 
+                backgroundColor: "#242424", 
+                color: "#f2f2f2", 
+                width: "25%",
+                fontSize: "30px",
+                marginTop: "5%",
+                border: "3px solid #fafafa"
+                }}
+        type="submit"
+        onClick={handleShowAbout}>About
+      </Button>
 
     </div>
   );
