@@ -67,15 +67,15 @@ export default class Movie extends React.Component {
               <Card 
                 style={{backgroundColor: "#242424"}}>
               <div style={{paddingTop: "2%"}}>
-                   <h1 className="title">{Title}</h1>
+                   <h3 className="title">{Title}</h3>
                </div>
-              <div style={{paddingTop: "2%",
+              <div style={{paddingTop: "0%",
                   maxWidth: "100%", 
                   height: "auto"}}>
                 {(Poster === "N/A") ? (
                 <img 
                   style={{
-                  maxWidth: "50%", 
+                  maxWidth: "25%", 
                   height: "auto"}}
                   src="https://www.movienewsletters.net/photos/000000h1.jpg" alt="my movie poster"/>
                 ) : null }
@@ -84,14 +84,18 @@ export default class Movie extends React.Component {
                 ) : null }
                </div>
                <div>
+
+               <div className={"col"}>
+
+               <div className={"row"} style={{display: "block", marginLeft: "auto", marginRight: "auto"}}> 
                <Button 
                  className="btn-lg" 
                  style={{ 
                          backgroundColor: "#242424", 
-                         color: "#f2f2f2", 
-                         width: "25%",
-                         fontSize: "30px",
-                         marginTop: "5%",
+                         color: "#f2f2f2",
+                         fontSize: "20px",
+                         marginTop: "1%",
+                         marginBottom: "1%",
                          border: "3px solid #fafafa"
                          }}
                  type="submit"
@@ -131,7 +135,14 @@ export default class Movie extends React.Component {
                    </Button>
                  </ModalFooter>
                </Modal>
+               </div>
+
+               <div className={"row"} style={{display: "block", marginLeft: "auto", marginRight: "auto"}}>
                <RateMovie thumbs_up={thumbs_up} thumbs_down={thumbs_down} title={Title} db_id={db_id} imdb_number={imdbID}/>
+               </div>
+
+              </div>
+
                </div>
             </Card>
           </div>

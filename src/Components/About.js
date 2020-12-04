@@ -30,6 +30,15 @@ export default function About() {
             <h5>Check out the repo for this project <a 
                 style={{color: "#fafafa"}}
                 href="https://github.com/Jess-White/hill_of_beans_react_app">here!</a></h5>
+            <h5>Please feel free to check out my <a 
+                style={{color: "#fafafa"}}
+                href="https://github.com/Jess-White/hill_of_beans_react_app">portfolio</a>, <a 
+                style={{color: "#fafafa"}}
+                href="https://github.com/Jess-White/hill_of_beans_react_app">linkedin</a>, and 
+                <a 
+                style={{color: "#fafafa"}}
+                href="https://github.com/Jess-White/hill_of_beans_react_app"> github</a> as well!
+            </h5>
         </Jumbotron>
     )
 }

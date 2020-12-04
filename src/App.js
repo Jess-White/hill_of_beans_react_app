@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ModalBody from 'react-bootstrap/ModalBody';
@@ -8,10 +8,8 @@ import {getMovies} from './Services/IMDBAPI';
 import Header from './Components/Header';
 import Movie from './Components/Movie';
 import SearchMovie from './Components/SearchMovie';
-import RateMovie from './Components/RateMovie';
 import About from './Components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card';
 
 export default function App() {
   const [movies, setMovies] = useState([])

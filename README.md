@@ -1,3 +1,46 @@
+## Welcome to Hill of Beans!
+
+Hill of Beans is a movie search app built on a React frontend and Rails backend. Indecision displays data from RapidApi's Movie Database (IMDB Alternative), which can be found here: 
+https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative
+
+This app utilizes both the search endpoints (to get a set of results) and the find by endpoints (to take each entry in the set of results and append additional data).
+
+All endpoints are readily available in the RapidAPI documentation, and all information is in the first layer of the response data object. 
+
+This tutorial also walks you through building a search in React using RapidAPI; it came in handy when I was trying to figure out how to use headers and parameters in my functions:
+
+https://rapidapi.com/blog/imdb-api-javascript-react/
+
+Users can search movies by title and see:
+
+- Title
+- Poster (image url)
+
+Then they can view results and click on a modal to view the following information: 
+
+- Year
+- Rating
+- Runtime 
+- Genre
+- Director
+- Actors
+- Plot
+- Awards
+
+After looking through the movie information, users can add their rating by clicking on a "thumbs up" or "thumbs down" button. The app includes functions that save these ratings on a rails backend, the repo for which can be found here:
+
+https://github.com/Jess-White/indecision_backend
+
+Here's some basic information on building a rails database:
+
+https://guides.rubyonrails.org/v2.3/getting_started.html
+
+For styling, I used react-bootstrap because it's straightforward and mobile-friendly. Documentation can be found here:
+
+https://react-bootstrap.github.io/
+
+Read on for some npm and React basic info:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

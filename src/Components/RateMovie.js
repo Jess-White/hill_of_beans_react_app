@@ -52,32 +52,39 @@ class RateMovie extends Component {
     return (
        <div className="rate-movie">
         <Card style={{backgroundColor: "#242424"}}>
-          <ButtonGroup>
+          <ButtonGroup style={{ 
+              width: "25%", display: "block", marginLeft: "auto", marginRight: "auto"}}>
             <Button 
               style={{ 
+              marginRight: "2%",
               backgroundColor: "#242424", 
               color: "#f2f2f2", 
-              width: "50%",
-              fontSize: "30px"
+              width: "25%",
+              fontSize: "20px",
+              border: "3px solid #fafafa",
+              borderRadius: "2px"
               }}
               type="submit" onClick={this.handleThumbsUp} value="thumbs_up">{thumbsUp}</Button>
             <Button 
               style={{ 
+              marginLeft: "2%",
               backgroundColor: "#242424", 
               color: "#f2f2f2", 
-              width: "50%",
-              fontSize: "30px"
+              width: "25%",
+              fontSize: "20px",
+              border: "3px solid #fafafa",
+              borderRadius: "2px"
               }} 
               type="submit" onClick={this.handleThumbsDown} value="thumbs_down">{thumbsDown}
             </Button>
           </ButtonGroup>
           {(this.state.thumbs_up === 0 && this.state.thumbs_down === 0) ? (
-            <h3>No one has rated {this.props.title} yet</h3>
+            <h4>No one has rated {this.props.title} yet</h4>
           ) : null }
           {(this.state.thumbs_up !== 0 || this.state.thumbs_down !== 0) ? (
             <div>
-              <h3>{this.state.thumbs_up} people gave {this.props.title} a thumbs up</h3>
-              <h3>{this.state.thumbs_down} people gave {this.props.title} a thumbs down</h3>
+              <h4>{this.state.thumbs_up} people gave {this.props.title} a thumbs up</h4>
+              <h4>{this.state.thumbs_down} people gave {this.props.title} a thumbs down</h4>
             </div>
           ) : null }
          </Card>
