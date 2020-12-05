@@ -3,7 +3,7 @@ import axios from 'axios';
 //get all of the movies from the database 
 
 export const getSavedFilms = () => {
-  return axios('https://git.heroku.com/hill-of-beans-db.git/api/films')
+  return axios('/api/films')
     .then(response => response.data)
 }
 
@@ -11,7 +11,7 @@ export const getSavedFilms = () => {
 
 export const addFilm = (imdb_number, title, rating) => {
   return axios
-    .post('https://git.heroku.com/hill-of-beans-db.git/api/films', {imdb_number, title, rating})
+    .post('/api/films', {imdb_number, title, rating})
     .then(response => response.data)
 }
 
@@ -22,7 +22,7 @@ export const createOrUpdateFilm = ({})
 export const updateFilm = (db_id, imdb_number, title, rating) => {
   return axios
     .patch(
-      'https://git.heroku.com/hill-of-beans-db.git/api/films/' + db_id,
+      '/api/films/' + db_id,
       {
         imdb_number: imdb_number,
         title: title,

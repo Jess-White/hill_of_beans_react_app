@@ -69,8 +69,7 @@ export default function App() {
         className="btn-lg" 
         style={{ 
                 backgroundColor: "#242424", 
-                color: "#f2f2f2", 
-                width: "25%",
+                color: "#f2f2f2",
                 fontSize: "30px",
                 marginTop: "5%",
                 border: "3px solid #fafafa"

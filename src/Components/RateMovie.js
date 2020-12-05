@@ -53,13 +53,12 @@ class RateMovie extends Component {
        <div className="rate-movie">
         <Card style={{backgroundColor: "#242424"}}>
           <ButtonGroup style={{ 
-              width: "25%", display: "block", marginLeft: "auto", marginRight: "auto"}}>
+              width: "100%", display: "block", marginLeft: "auto", marginRight: "auto"}}>
             <Button 
               style={{ 
               marginRight: "2%",
               backgroundColor: "#242424", 
               color: "#f2f2f2", 
-              width: "25%",
               fontSize: "20px",
               border: "3px solid #fafafa",
               borderRadius: "2px"
@@ -70,7 +69,6 @@ class RateMovie extends Component {
               marginLeft: "2%",
               backgroundColor: "#242424", 
               color: "#f2f2f2", 
-              width: "25%",
               fontSize: "20px",
               border: "3px solid #fafafa",
               borderRadius: "2px"

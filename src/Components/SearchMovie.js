@@ -45,8 +45,9 @@ export default class SearchMovie extends React.Component {
          <div className="search">
             <div className="row"> 
             <input className="col-sm-10" style={{paddingTop: "1%", paddingBottom: "1%", 
-              paddingLeft: "0%",
-              backgroundColor: "#a9a9a9"}} type="text" name="title" onChange={this.handleInputTitle} value={title}/>
+              paddingLeft: "2%",
+              backgroundColor: "#a9a9a9", 
+              fontSize: "20px"}} type="text" name="title" onChange={this.handleInputTitle} value={title}/>
             <div className="col-sm-2">
              <Button 
                 style={{ 
