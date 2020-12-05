@@ -5,35 +5,35 @@ https://hill-of-beans-db.herokuapp.com/
 
 Here are some screenshots from the deployed version:
 
-#Frontpage:
+# Frontpage:
 
 <img 
   src="./public/screenshot_one.png"
   alt="screenshot one - frontpage"
 />
 
-#About:
+# About:
 
 <img 
   src="./public/screenshot_two.png" 
   alt="screenshot two - about modal"
 />
 
-#Search Results:
+# Search Results:
 
 <img 
   src="./public/screenshot_three.png"
   alt="screenshot three - search results"
 />
 
-#Movie Info:
+# Movie Info:
 
 <img 
   src="./public/screenshot_four.png" 
   alt="screenshot three - more information modal"
 />
 
-Hill of Beans is a movie search app built on a React frontend and Rails backend. 
+# Hill of Beans is a movie search app built on a React frontend and Rails backend. 
 
 Users can search movies by title and see:
 
@@ -106,21 +106,27 @@ frontend:
 
 (These are set to run on localhost:3000 and localhost:3001 respectively)
 
-#Additional resources:
+# Additional Resources:
+
+# Rails
 
 Here's some basic information on building a rails database:
 
 https://guides.rubyonrails.org/v2.3/getting_started.html
 
+# React-Bootstrap
+
 For styling, I used react-bootstrap because it's straightforward and mobile-friendly. Documentation can be found here:
 
 https://react-bootstrap.github.io/
+
+# Create React App (npm)
 
 I used this resource for Create React App:
 
 https://create-react-app.dev/docs/getting-started
 
-Available Scripts:
+# Available Scripts:
 In the project directory, you can run:
 
 ### `npm start`
