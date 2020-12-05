@@ -1,4 +1,4 @@
-## Welcome to Hill of Beans!
+# Welcome to Hill of Beans!
 
 Here is a link to the deployed version:
 https://hill-of-beans-db.herokuapp.com/
