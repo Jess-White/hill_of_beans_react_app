@@ -82,27 +82,27 @@ https://rapidapi.com/blog/imdb-api-javascript-react/
 
 You will need:
 
-# backend:
+backend:
 - Ruby 2.6 +
 - Rails 6 +
 
-# frontend:
+frontend:
 - React 17 +
 - React-bootstrap 1.4 + 
 
-# backend:
-git clone https://github.com/Jess-White/hill_of_beans_rails_db
+backend:
+### `git clone https://github.com/Jess-White/hill_of_beans_rails_db`
 
-# frontend:
-git clone https://github.com/Jess-White/hill_of_beans_react_app
+frontend:
+### `git clone https://github.com/Jess-White/hill_of_beans_react_app`
 
-# local start:
+local start:
 
-# backend:
-rails s
+backend:
+### `rails s`
 
-# frontend: 
-npm start
+frontend: 
+### `npm start`
 
 (These are set to run on localhost:3000 and localhost:3001 respectively)
 
@@ -120,75 +120,33 @@ I used this resource for Create React App:
 
 https://create-react-app.dev/docs/getting-started
 
-Read on for some additional info about Create React App: 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
+Available Scripts:
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
+Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm test`
+Launches the test runner in the interactive watch mode. See the section about running tests for more information.
 
-### `yarn test`
+### `npm run build`
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The build is minified and the filenames include the hashes. If necessary, classnames and function names can be enabled for profiling purposes. See the production build section for more information.
 
-### `yarn build`
+Your app is ready to be deployed! See the section about deployment for more information about deploying your application to popular hosting providers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run eject`
+Note: this is a one-way operation. Once you eject, you can’t go back!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) into your project as dependencies in package.json. Technically, the distinction between dependencies and development dependencies is pretty arbitrary for front-end apps that produce static bundles.
 
-### `yarn eject`
+In addition, it used to cause problems with some hosting platforms that didn't install development dependencies (and thus weren't able to build the project on the server or test it right before deployment). You are free to rearrange your dependencies in package.json as you see fit.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You don’t have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
