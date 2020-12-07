@@ -7,6 +7,8 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
+import DuplicateRating from './DuplicateRating'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons'
@@ -19,33 +21,58 @@ class RateMovie extends Component {
 
   state = {
     thumbs_up: this.props.thumbs_up,
-    thumbs_down: this.props.thumbs_down
+    thumbs_down: this.props.thumbs_down,
+    duplicateRating: false
   }
 
   handleThumbsUp = (event) => {
     const rating = "thumbs_up"
     event.preventDefault();
-    if (this.props.db_id) {
-      updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
+    if (!localStorage.getItem(this.props.title)) {
+      if (this.props.db_id) {
+        updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
+        .then(() => {
+          localStorage.setItem(this.props.title, true)
+          console.log(localStorage)
+        })
+      } else {
+        addFilm(this.props.imdb_number, this.props.title, rating)
+        .then(() => {
+          localStorage.setItem(this.props.title, true)
+          console.log(localStorage)
+        })
+      }
+      this.setState({
+        thumbs_up: this.state.thumbs_up + 1
+      })
     } else {
-      addFilm(this.props.imdb_number, this.props.title, rating)
+      this.setState({duplicateRating: true})
     }
-    this.setState({
-      thumbs_up: this.state.thumbs_up + 1
-    })
    }
 
    handleThumbsDown = (event) => {
     const rating = "thumbs_down"
     event.preventDefault();
-    if (this.props.db_id) {
-      updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
-    } else{
-      addFilm(this.props.imdb_number, this.props.title, rating)
+    if (!localStorage.getItem(this.props.title)) {
+      if (this.props.db_id) {
+        updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
+        .then(() => {
+          localStorage.setItem(this.props.title, true)
+          console.log(localStorage)
+        })
+      } else {
+        addFilm(this.props.imdb_number, this.props.title, rating)
+        .then(() => {
+          localStorage.setItem(this.props.title, true)
+          console.log(localStorage)
+        })
+      }
+      this.setState({
+        thumbs_down: this.state.thumbs_down + 1
+      })
+    } else {
+      this.setState({duplicateRating: true})
     }
-    this.setState({
-      thumbs_down: this.state.thumbs_down + 1
-    })
    }
 
    render() {
@@ -76,6 +103,11 @@ class RateMovie extends Component {
               type="submit" onClick={this.handleThumbsDown} value="thumbs_down">{thumbsDown}
             </Button>
           </ButtonGroup>
+
+          {(this.state.duplicateRating === true) ? (
+            <DuplicateRating />
+          ) : null}
+
           {(this.state.thumbs_up === 0 && this.state.thumbs_down === 0) ? (
             <h4>No one has rated {this.props.title} yet</h4>
           ) : null }
