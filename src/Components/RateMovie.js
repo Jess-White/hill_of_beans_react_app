@@ -23,6 +23,8 @@ class RateMovie extends Component {
     duplicateRating: false
   }
 
+  //Function to rate movies
+
   handleThumbsUp = (event) => {
     const rating = "thumbs_up"
     event.preventDefault();
