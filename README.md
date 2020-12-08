@@ -3,6 +3,32 @@
 Here is a link to the deployed version:
 https://hill-of-beans-db.herokuapp.com/
 
+#Note re: Year One Submission:
+
+I have made some additional changes to this repository since the Year One submission deadline. To keep the work separate, I switched into a different branch, "post_year_one_submission", and merged them with comments. They are as follows:
+
+- I started building this app by creating a RapidAPI API call function on the backend, using RapidAPI's "search" endpoint. When I was finishing up, I decided that I wanted to show more info about each movie than was available on the "search" endpoint. 
+
+RapidAPI's Movie Database (IMDB Alternative) also has a "find by [imdb id]" option. 
+
+So, I decided to add a second RapidAPI call that is triggered when the user clicks on the "more info" button in the Movie component. 
+
+After the deadline, I realized that I had placed this function on the frontend, including the API key, which is something you should never do. 
+
+To fix this and standardize everything, I refactored this second function to live on the backend, where it augments a "show" function in the controller.
+
+- I didn't like that the rating function was pretty rough, and that users could click "thumbs up" as many times as they wanted. 
+
+After the deadline, I decided to add a simple error message component. When the user hits "thumbs up", the title of the movie you've rated is stored in local storage. 
+
+If the user hits "thumbs up" or "thumbs down" for the same movie, the function checks for the title in local storage and displays the error message if it is found. 
+
+If I were to refine this even further, I might try adding a show/hide for the rate-movie buttons, or even a button that allows you to change your rating by running a function that removes the title from local storage.
+
+- I had many superfluous functions after refactoring, so I deleted them to clean up my code.
+
+Thank you! I hope this is clear. Please read on for information about my app. 
+
 Here are some screenshots from the deployed version:
 
 # Frontpage:
