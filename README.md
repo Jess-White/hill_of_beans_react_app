@@ -3,7 +3,7 @@
 Here is a link to the deployed version:
 https://hill-of-beans-db.herokuapp.com/
 
-#Note re: Year One Submission:
+# Note re: Year One Submission:
 
 I have made some additional changes to this repository since the Year One submission deadline. To keep the work separate, I switched into a different branch, "post_year_one_submission", and merged them with comments. They are as follows:
 
