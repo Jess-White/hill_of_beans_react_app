@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { addFilm, updateFilm } from '../Services/RailsDB.js';
 
-// import ReactDOM from 'react-dom'
-
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup'

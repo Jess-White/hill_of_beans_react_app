@@ -6,8 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 import ModalBody from 'react-bootstrap/ModalBody';
 import ModalFooter from 'react-bootstrap/ModalFooter';
 import axios from "axios";
-import { moreInfo } from '../Services/RailsDB.js';
-
 
 export default class Movie extends React.Component {
     state = {
