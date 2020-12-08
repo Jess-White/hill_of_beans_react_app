@@ -26,17 +26,17 @@ class RateMovie extends Component {
   handleThumbsUp = (event) => {
     const rating = "thumbs_up"
     event.preventDefault();
-    if (!localStorage.getItem(this.props.title)) {
+    if (!localStorage.getItem(this.props.imdb_number)) {
       if (this.props.db_id) {
         updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
         .then(() => {
-          localStorage.setItem(this.props.title, true)
+          localStorage.setItem(this.props.imdb_number, true)
           console.log(localStorage)
         })
       } else {
         addFilm(this.props.imdb_number, this.props.title, rating)
         .then(() => {
-          localStorage.setItem(this.props.title, true)
+          localStorage.setItem(this.props.imdb_number, true)
           console.log(localStorage)
         })
       }
@@ -51,17 +51,17 @@ class RateMovie extends Component {
    handleThumbsDown = (event) => {
     const rating = "thumbs_down"
     event.preventDefault();
-    if (!localStorage.getItem(this.props.title)) {
+    if (!localStorage.getItem(this.props.imdb_number)) {
       if (this.props.db_id) {
         updateFilm(this.props.db_id, this.props.imdb_number, this.props.title, rating)
         .then(() => {
-          localStorage.setItem(this.props.title, true)
+          localStorage.setItem(this.props.imdb_number, true)
           console.log(localStorage)
         })
       } else {
         addFilm(this.props.imdb_number, this.props.title, rating)
         .then(() => {
-          localStorage.setItem(this.props.title, true)
+          localStorage.setItem(this.props.imdb_number, true)
           console.log(localStorage)
         })
       }
