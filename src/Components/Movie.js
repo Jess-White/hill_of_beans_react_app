@@ -36,7 +36,7 @@ export default class Movie extends React.Component {
     const inputID = this.props.movie.imdbID
     const options = {
       method: 'GET',
-      url: 'http://localhost:3000/api/films/' + inputID,
+      url: '/api/films/' + inputID,
     }
     axios.request(options).then((response) => {
       this.setState({
