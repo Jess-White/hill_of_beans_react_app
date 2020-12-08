@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import ModalBody from 'react-bootstrap/ModalBody';
 import ModalFooter from 'react-bootstrap/ModalFooter';
 import axios from "axios";
+import { moreInfo } from '../Services/RailsDB.js';
 
 
 export default class Movie extends React.Component {
@@ -37,12 +38,7 @@ export default class Movie extends React.Component {
     const inputID = this.props.movie.imdbID
     const options = {
       method: 'GET',
-      url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
-      params: {i: `${inputID}`, r: 'json'},
-      headers: {
-        'x-rapidapi-key': 'e979f7406cmsh363d1f98423c118p197d7bjsnce1e962638fd',
-        'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com'
-      }
+      url: 'http://localhost:3000/api/films/' + inputID,
     }
     axios.request(options).then((response) => {
       this.setState({

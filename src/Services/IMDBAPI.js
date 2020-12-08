@@ -11,3 +11,14 @@ export const getMovies = (title) => {
 
 }
 
+export const moreInfo = (imdb_id) => {
+
+  const options = {
+    method: 'GET',
+    url: `/api/films/moreInfo/`
+  };
+
+  return axios.request(options)
+
+}
+

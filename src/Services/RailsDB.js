@@ -15,7 +15,11 @@ export const addFilm = (imdb_number, title, rating) => {
     .then(response => response.data)
 }
 
-export const createOrUpdateFilm = ({})
+export const moreInfo = (imdb_number, db_id) => {
+  return axios
+    .get('/api/films/' + db_id)
+    .then(response => response.data)
+}
 
 //add incremented score to the database
 
