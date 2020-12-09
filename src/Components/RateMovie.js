@@ -24,6 +24,7 @@ class RateMovie extends Component {
   }
 
   //Function to rate movies
+  //Includes code to set imdb_number in local storage and retrieve it from local storage
 
   handleThumbsUp = (event) => {
     const rating = "thumbs_up"
